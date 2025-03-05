@@ -19,7 +19,10 @@ const menuData = {
         { label: "Pending Claims-New", link: "businessOperation/claims/pendingClaimsNew" },
         { label: "Pending Claims-Adjusted", link: "businessOperation/claims/pendingClaimsAdjusted" },
         { label: "Finalized Claims", link: "businessOperation/claims/finalizedClaims" }
-      ]
+      ],
+      roles: {
+        claims: ['Insitz Plus Admin', 'Customer Leadership', 'BPaaS Leadership', 'BPaaS Manager', 'BPaas Leads', 'BPaas Claims Analyst'],
+      }
     },
     {
       id: 'enrollment',
@@ -31,7 +34,10 @@ const menuData = {
         { label: "ID Card Aging", link: "businessOperation/enrollment/idCardAging" },
         { label: "ID Card Status", link: "businessOperation/enrollment/idCardStatus" },
         { label: "TAT-Enrollments", link: "businessOperation/enrollment/tatEnrollments" }
-      ]
+      ],
+      roles:{
+        enrollment: ['Insitz Plus Admin', 'Customer Leadership', 'BPaaS Leadership', 'BPaaS Manager', 'BPaas Leads', 'BPaas Enrollment Analyst'],
+      }
     },
     {
       id: 'callCenter',
@@ -41,15 +47,12 @@ const menuData = {
       submenus: [
         { label: 'Overall SLA', link: 'businessOperation/callCenter/overallSLA'},
         { label: 'Team Details', link: 'businessOperation/callCenter/teamDetails'}
-      ]
+      ],
+      roles:{
+        callCenter: ['Insitz Plus Admin', 'Customer Leadership', 'BPaaS Leadership', 'BPaaS Manager'] 
+      }
      }
   ],
-  roles: {
-    claims: ['Insitz Plus Admin', 'Customer Leadership', 'BPaaS Leadership', 'BPaaS Manager', 'BPaas Leads', 'BPaas Claims Analyst'],
-    enrollment: ['Insitz Plus Admin', 'Customer Leadership', 'BPaaS Leadership', 'BPaaS Manager', 'BPaas Leads', 'BPaas Enrollment Analyst'],
-    callCenter: ['Insitz Plus Admin', 'Customer Leadership', 'BPaaS Leadership', 'BPaaS Manager'] 
-
-  }
 };
 
 // API endpoint to get menu data
