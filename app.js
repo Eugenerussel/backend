@@ -15,10 +15,10 @@ const menuData = {
       label: "Claims",
       class: 'claims-menu',
       submenus: [
-        { label: "Production Report", link: "/businessOperation/claims/productionReport" },
-        { label: "Pending Claims-New", link: "/businessOperation/claims/pendingClaimsNew" },
-        { label: "Pending Claims-Adjusted", link: "/businessOperation/claims/pendingClaimsAdjusted" },
-        { label: "Finalized Claims", link: "/businessOperation/claims/finalizedClaims" }
+        { label: "Production Report", link: "businessOperation/claims/productionReport" },
+        { label: "Pending Claims-New", link: "businessOperation/claims/pendingClaimsNew" },
+        { label: "Pending Claims-Adjusted", link: "businessOperation/claims/pendingClaimsAdjusted" },
+        { label: "Finalized Claims", link: "businessOperation/claims/finalizedClaims" }
       ]
     },
     {
@@ -27,10 +27,10 @@ const menuData = {
       label: "Enrollment",
       class: 'enrollment-menu',
       submenus: [
-        { label: "Enrollment Aging", link: "/businessOperation/enrollment/enrollmentAging" },
-        { label: "ID Card Aging", link: "/businessOperation/enrollment/idCardAging" },
-        { label: "ID Card Status", link: "/businessOperation/enrollment/idCardStatus" },
-        { label: "TAT-Enrollments", link: "/businessOperation/enrollment/tatEnrollments" }
+        { label: "Enrollment Aging", link: "businessOperation/enrollment/enrollmentAging" },
+        { label: "ID Card Aging", link: "businessOperation/enrollment/idCardAging" },
+        { label: "ID Card Status", link: "businessOperation/enrollment/idCardStatus" },
+        { label: "TAT-Enrollments", link: "businessOperation/enrollment/tatEnrollments" }
       ]
     },
     {
@@ -39,8 +39,8 @@ const menuData = {
       label: 'Call Center',
       class: 'callcenter-menu',
       submenus: [
-        { label: 'Overall SLA', link: '/businessOperation/callCenter/overallSLA'},
-        { label: 'Team Details', link: '../teamDetails'}
+        { label: 'Overall SLA', link: 'businessOperation/callCenter/overallSLA'},
+        { label: 'Team Details', link: 'businessOperation/callCenter/teamDetails'}
       ]
      }
   ],
