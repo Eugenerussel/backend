@@ -37,7 +37,7 @@ const menuData = {
       id: 'callCenter',
       name: 'callCenter',
       label: 'Call Center',
-      class: 'callCenter-menu',
+      class: 'callcenter-menu',
       submenus: [
         { label: 'Overall SLA', link: '/businessOperation/callCenter/overallSLA'},
         { label: 'Team Details', link: '../teamDetails'}
