@@ -1,7 +1,9 @@
+require('dotenv').config(); 
 const express = require('express');
 const cors = require('cors');
 const app = express();
 const PORT = 3000;
+
 
 app.use(cors());
 app.use(express.json());
@@ -14,6 +16,7 @@ const menuData = {
       name: "claims",
       label: "Claims",
       class: 'claims-menu',
+      icon: 'bi-file-earmark-text',
       submenus: [
         { label: "Production Report", link: "businessOperation/claims/productionReport" },
         { label: "Pending Claims-New", link: "businessOperation/claims/pendingClaimsNew" },
@@ -29,6 +32,7 @@ const menuData = {
       name: "enrollment",
       label: "Enrollment",
       class: 'enrollment-menu',
+      icon: 'bi-person-plus',
       submenus: [
         { label: "Enrollment Aging", link: "businessOperation/enrollment/enrollmentAging" },
         { label: "ID Card Aging", link: "businessOperation/enrollment/idCardAging" },
@@ -44,6 +48,7 @@ const menuData = {
       name: 'callCenter',
       label: 'Call Center',
       class: 'callcenter-menu',
+      icon: 'bi-telephone',
       submenus: [
         { label: 'Overall SLA', link: 'businessOperation/callCenter/overallSLA'},
         { label: 'Team Details', link: 'businessOperation/callCenter/teamDetails'}
@@ -58,6 +63,10 @@ const menuData = {
 // API endpoint to get menu data
 app.get('/api/menu-data', (req, res) => {
   res.json(menuData);
+});
+app.get('/api/qliksense-url', (req, res) => {
+  const qlikUrl = process.env.QLIK_SENSE_URL;
+  res.json({ url: qlikUrl });
 });
 
 app.listen(PORT, () => {
